@@ -7,6 +7,7 @@ def first_anagrams?(string1, string2)
       result << string1[i..j]
     end
   end
+  
   result.any? do |word| #=>o(n)
     word.chars.sort == string2.chars.sort #=>0(2n^2)
   end
